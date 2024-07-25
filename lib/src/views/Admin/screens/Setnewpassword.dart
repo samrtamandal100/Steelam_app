@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:steelam_industries_app/src/controllers/admin/SetnewpassordController.dart';
-import 'package:steelam_industries_app/src/controllers/admin/loginController.dart';
+import 'package:steelam_industries_app/src/controllers/SetnewpassordController.dart';
+import 'package:steelam_industries_app/src/controllers/loginController.dart';
 
 class Setnewpassword extends StatelessWidget {
   final newpasswordController controller = Get.put(newpasswordController());

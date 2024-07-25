@@ -43,7 +43,6 @@ class StoreForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Add Store")),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

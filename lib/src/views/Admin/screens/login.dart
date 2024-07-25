@@ -1,31 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:steelam_industries_app/src/controllers/admin/loginController.dart';
+import 'package:steelam_industries_app/src/controllers/loginController.dart';
 
 class LoginPage extends StatelessWidget {
   final LoginController controller = Get.put(LoginController());
 
   Widget buildContent(BuildContext context,
       {bool isMobile = false, bool isTablet = false}) {
-    double imageSize = isMobile ? 150 : isTablet ? 200 : 250;
-    double spaceHeight = isMobile ? 20 : isTablet ? 30 : 50;
+    double imageSize = isMobile
+        ? 150
+        : isTablet
+            ? 200
+            : 250;
+    double spaceHeight = isMobile
+        ? 20
+        : isTablet
+            ? 30
+            : 50;
 
     return SingleChildScrollView(
       child: Center(
         child: Container(
           padding: EdgeInsets.symmetric(
-              horizontal: isMobile ? 20 : isTablet ? 40 : 60),
+              horizontal: isMobile
+                  ? 20
+                  : isTablet
+                      ? 40
+                      : 60),
           child: Form(
             key: controller.formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(height: spaceHeight),
-                 SizedBox(height: spaceHeight),
+                SizedBox(height: spaceHeight),
                 Image.asset('assets/logo/logo.png', height: imageSize),
                 SizedBox(height: spaceHeight),
                 Text("Login",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                    style:
+                        TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
                 SizedBox(height: 10),
                 Text("Welcome Back! to Steelam Industries",
                     style: TextStyle(fontSize: 16, color: Colors.grey[600])),
@@ -112,7 +125,7 @@ class LoginPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18)),
                     ),
-                    child: Text('Continue'),
+                    child: Text('I want to access my Account'),
                   ),
                 ),
                 SizedBox(height: spaceHeight),

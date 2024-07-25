@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pinput/pinput.dart';
-import 'package:steelam_industries_app/src/controllers/admin/AuthenticateScreenController.dart';
+import 'package:steelam_industries_app/src/controllers/AuthenticateScreenController.dart';
 import 'package:steelam_industries_app/src/views/Admin/widgets/ContactInfo.dart';
 
 class AuthenticationScreen extends StatelessWidget {
@@ -165,6 +165,3 @@ class AuthenticationScreen extends StatelessWidget {
     );
   }
 }
-
-
-
