@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
-import 'package:steelam_industries_app/src/controllers/forgotpasswordControllers.dart';
+import 'package:steelam_industries_app/src/Auth/auth_controller/forgotpasswordControllers.dart';
 
 void _forgotPassword(BuildContext context) {
   final Forgotpasswordcontrollers controller =

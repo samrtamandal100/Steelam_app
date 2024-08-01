@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:steelam_industries_app/src/controllers/SetnewpassordController.dart';
-import 'package:steelam_industries_app/src/controllers/loginController.dart';
+import 'package:steelam_industries_app/src/Auth/auth_controller/loginController.dart';
 
-class Setnewpassword extends StatelessWidget {
-  final newpasswordController controller = Get.put(newpasswordController());
+class LoginPage extends StatelessWidget {
+  final LoginController controller = Get.put(LoginController());
 
   Widget buildContent(BuildContext context,
       {bool isMobile = false, bool isTablet = false}) {
@@ -35,23 +34,23 @@ class Setnewpassword extends StatelessWidget {
               children: [
                 SizedBox(height: spaceHeight),
                 SizedBox(height: spaceHeight),
-                SizedBox(height: spaceHeight),
-                SizedBox(height: spaceHeight),
                 Image.asset('assets/logo/logo.png', height: imageSize),
                 SizedBox(height: spaceHeight),
-                Text("Set Password",
+                Text("Login",
                     style:
                         TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
                 SizedBox(height: 10),
                 Text("Welcome Back! to Steelam Industries",
                     style: TextStyle(fontSize: 16, color: Colors.grey[600])),
                 SizedBox(height: spaceHeight),
+                Image.asset('assets/image/loginlogo.png', height: imageSize),
+                SizedBox(height: spaceHeight),
                 SizedBox(
                   width: 400,
                   child: TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'New Password',
-                      prefixIcon: Icon(Icons.lock),
+                      labelText: 'Username',
+                      prefixIcon: Icon(Icons.person),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30)),
                       focusedBorder: OutlineInputBorder(
@@ -69,7 +68,6 @@ class Setnewpassword extends StatelessWidget {
                         ),
                       ),
                     ),
-                    obscureText: true,
                     validator: (value) =>
                         controller.validateUsername(value ?? ''),
                     onChanged: (value) => controller.username.value = value,
@@ -80,7 +78,7 @@ class Setnewpassword extends StatelessWidget {
                   width: 400,
                   child: TextFormField(
                     decoration: InputDecoration(
-                      labelText: 'Confirm Password',
+                      labelText: 'Password',
                       prefixIcon: Icon(Icons.lock),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30)),
@@ -105,6 +103,16 @@ class Setnewpassword extends StatelessWidget {
                     onChanged: (value) => controller.password.value = value,
                   ),
                 ),
+                Align(
+                  alignment: Alignment.center,
+                  child: TextButton(
+                    onPressed: () => {},
+                    child: Text(
+                      "Forgot Password?",
+                      style: TextStyle(color: Color(0xFFc89b6e)),
+                    ),
+                  ),
+                ),
                 SizedBox(height: spaceHeight),
                 SizedBox(
                   width: 400,
@@ -117,7 +125,7 @@ class Setnewpassword extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18)),
                     ),
-                    child: Text('Continue'),
+                    child: Text('I want to access my Account'),
                   ),
                 ),
                 SizedBox(height: spaceHeight),

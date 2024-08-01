@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:steelam_industries_app/src/controllers/loginController.dart';
+import 'package:steelam_industries_app/src/Auth/auth_controller/loginController.dart';
 
 class LoginPages extends StatelessWidget {
   final newpasswordController controller = Get.put(newpasswordController());
